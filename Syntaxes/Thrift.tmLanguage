@@ -806,12 +806,7 @@
 		<key>field</key>
 		<dict>
 			<key>begin</key>
-			<string>(?x)
-						(?&lt;![^\s{(])(?=\S)
-						(\d+\s*:)?[ \t]*
-						(?:	(required|optional)(?!\S)[ \t]*
-						|	(?=\S)(?!=required|optional|\d)
-						)</string>
+			<string>(\d+):[ \t]+(required[ \t]+|optional[ \t]+)(\S+)[ \t]+(\S+)</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -823,6 +818,16 @@
 				<dict>
 					<key>name</key>
 					<string>keyword.other.requiredness.thrift</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>storage.other.field-type.thrift</string>
+				</dict>
+				<key>4</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.field-name.thrift</string>
 				</dict>
 			</dict>
 			<key>end</key>
