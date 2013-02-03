@@ -806,7 +806,7 @@
 		<key>field</key>
 		<dict>
 			<key>begin</key>
-			<string>(\d+):[ \t]+(required[ \t]+|optional[ \t]+)(\S+)[ \t]+(\S+)</string>
+			<string>(\d+):[ \t]+(required[ \t]+|optional[ \t]+)(\S+)[ \t]+(\S+)[ \t]*(\((([^=]+)=("[^"]+").*)\))?</string>
 			<key>beginCaptures</key>
 			<dict>
 				<key>1</key>
@@ -828,6 +828,16 @@
 				<dict>
 					<key>name</key>
 					<string>entity.other.field-name.thrift</string>
+				</dict>
+				<key>7</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.field-annotation-key.thrift</string>
+				</dict>
+				<key>8</key>
+				<dict>
+					<key>name</key>
+					<string>string.quoted.double.thrift</string>
 				</dict>
 			</dict>
 			<key>end</key>
